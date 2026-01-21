@@ -58,7 +58,7 @@
               <span class="author-block">
                 <a href="https://jeffreyyh.github.io/">Yafei Hu</a><sup>1*</sup>,</span>
               <span class="author-block">
-                <a href="https://lingfeng.moe/">Lingfeng Sun</a><sup>1*</sup>,
+                <a href="https://lingfeng.moe/">Lingfeng Sun</a><sup>1</sup>,
               </span>
               <span class="author-block">
                 <a href="https://ktushar14.github.io/">Tushar Kusnur</a><sup>1</sup>,
@@ -155,6 +155,253 @@
       </p>
     </div>
   </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Offline Simulation & Optimization</h2>
+      <p>We perform offline simulation and optimzation of objects using collected RGB-D videos.</p>
+      <br>
+      <div class="container is-max-desktop affordance-viz">
+        <div id="results-carousel-offline" class="carousel results-carousel">
+
+          <div class="item item-offline">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Collected Video</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/video/0_dough.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Offline Simulation Twin</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_dough.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>Stretch dough</strong></p>
+            </div>
+          </div>
+
+          <div class="item item-offline">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Collected Video</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/video/0_playdoh.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Offline Simulation Twin</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_playdoh.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>Squeeze plasticine</strong></p>
+            </div>
+          </div>
+
+          <div class="item item-offline">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Collected Video</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/video/0_pita.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Offline Simulation Twin</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_pita.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>Tear bread</strong></p>
+            </div>
+          </div>
+
+          <div class="item item-offline">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Collected Video</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/video/0_rope.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Offline Simulation Twin</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_rope.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>Manipulate rope</strong></p>
+            </div>
+          </div>
+
+          <div class="item item-offline">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Collected Video</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/video/0_cloth.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Offline Simulation Twin</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_cloth.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>Lift cloth</strong></p>
+            </div>
+          </div>
+
+      </div>
+      <script>
+        bulmaCarousel.attach('#results-carousel-offline', {
+          slidesToShow: 2
+        });
+      </script>
+  </section>
+
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Online Simulation & Optimization</h2>
+      <p>We perform online simulation and optimization using real-time sensory data.</p>
+      <br>
+      <div class="container is-max-desktop affordance-viz">
+        <div id="results-carousel-online" class="carousel results-carousel">
+          <div class="item item-online">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Streaming Video</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/astranaut_horse_ours.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Online Simulation Twin</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/astranaut_horse_baseline.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>An astronaut riding a horse</strong></p>
+            </div>
+          </div>
+
+
+      </div>
+      <script>
+        bulmaCarousel.attach('#results-carousel-online', {
+          slidesToShow: 2
+        });
+      </script>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Application</h2>
+      <p>We augment application with [placeholder].</p>
+      <br>
+      <div class="container is-max-desktop affordance-viz">
+        <div id="results-carousel-application" class="carousel results-carousel">
+          <div class="item item-application">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>w/ [placeholder]</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/astranaut_horse_ours.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>w/o [placeholder]</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/astranaut_horse_baseline.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>An astronaut riding a horse</strong></p>
+            </div>
+          </div>
+
+      </div>
+      <script>
+        bulmaCarousel.attach('#results-carousel-application', {
+          slidesToShow: 2
+        });
+      </script>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Comparison with baseline</h2>
+      <p>We augment baseline with [placeholder].</p>
+      <br>
+      <div class="container is-max-desktop affordance-viz">
+        <div id="results-carousel-baseline" class="carousel results-carousel">
+          <div class="item item-baseline">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>w/ [placeholder]</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/astranaut_horse_ours.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>w/o [placeholder]</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./static/videos/astranaut_horse_baseline.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>An astronaut riding a horse</strong></p>
+
+            </div>
+          </div>
+      </div>
+      <script>
+        bulmaCarousel.attach('#results-carousel-baseline', {
+          slidesToShow: 2
+        });
+      </script>
+  </section> -->
+
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
