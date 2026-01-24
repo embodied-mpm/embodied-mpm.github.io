@@ -287,10 +287,12 @@
       </script>
   </section>
 
-  <!-- <section class="section">
+  <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Online Simulation & Optimization</h2>
-      <p>We perform online simulation and optimization using real-time sensory data.</p>
+      <p>We perform online simulation and optimization using real-time sensory data.<br>
+        In the simulation clip, the <span style="color: red;">red</span> part is the segmented object, and the <span style="color: green;">green</span> part is the simulation overlay.
+      </p>
       <br>
       <div class="container is-max-desktop affordance-viz">
         <div id="results-carousel-online" class="carousel results-carousel">
@@ -301,22 +303,43 @@
                   <p><strong>Streaming Video</strong></p>
                   <br>
                   <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/astranaut_horse_ours.mp4" type="video/mp4">
+                    <source src="./assets/experiments/online/rope_opt_real.mp4" type="video/mp4">
                   </video>
                 </div>
                 <div class="half">
                   <p><strong>Online Simulation Twin</strong></p>
                   <br>
                   <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/astranaut_horse_baseline.mp4" type="video/mp4">
+                    <source src="./assets/experiments/online/rope_opt_sim.mp4" type="video/mp4">
                   </video>
                 </div>
                 <br>
               </div>
-              <p><strong>An astronaut riding a horse</strong></p>
+              <p><strong>Manipulate rope</strong></p>
             </div>
           </div>
-
+          <div class="item item-online">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Streaming Video</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/online/dough_opt_real.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Online Simulation Twin</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/online/dough_opt_sim.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>Manipulate bread dough</strong></p>
+            </div>
+          </div>
 
       </div>
       <script>
@@ -329,7 +352,9 @@
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3">Application</h2>
-      <p>We augment application with [placeholder].</p>
+      <p>We showcase model rollouts in which optimal controller actions are explored in simulation while the robot tracks the simulated rollout to execute the task.<br>
+      In the simulation clip, the <span style="color: red;">red</span> part is the segmented object, and the <span style="color: green;">green</span> part is the simulation overlay.
+      </p>
       <br>
       <div class="container is-max-desktop affordance-viz">
         <div id="results-carousel-application" class="carousel results-carousel">
@@ -337,25 +362,46 @@
             <div class="full pt item-container">
               <div class="item-container">
                 <div class="half">
-                  <p><strong>w/ [placeholder]</strong></p>
+                  <p><strong>Simulation Rollout</strong></p>
                   <br>
                   <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/astranaut_horse_ours.mp4" type="video/mp4">
+                    <source src="./assets/experiments/online/rope_app_sim.mp4" type="video/mp4">
                   </video>
                 </div>
                 <div class="half">
-                  <p><strong>w/o [placeholder]</strong></p>
+                  <p><strong>Robot Execution</strong></p>
                   <br>
                   <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/astranaut_horse_baseline.mp4" type="video/mp4">
+                    <source src="./assets/experiments/online/rope_app_real.mp4" type="video/mp4">
                   </video>
                 </div>
                 <br>
               </div>
-              <p><strong>An astronaut riding a horse</strong></p>
+              <p><strong>Manipulate rope</strong></p>
             </div>
           </div>
-
+          <div class="item item-application">
+            <div class="full pt item-container">
+              <div class="item-container">
+                <div class="half">
+                  <p><strong>Simulation Rollout</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/online/dough_app_sim.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="half">
+                  <p><strong>Robot Execution</strong></p>
+                  <br>
+                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/experiments/online/dough_app_real.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+              <p><strong>Manipulate bread dough</strong></p>
+            </div>
+          </div>
       </div>
       <script>
         bulmaCarousel.attach('#results-carousel-application', {
@@ -366,41 +412,101 @@
 
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Comparison with baseline</h2>
-      <p>We augment baseline with [placeholder].</p>
+      <h2 class="title is-3">Comparison with PhysTwin</h2>
+      <p>  We compare our method with
+        <a href="https://jianghanxiao.github.io/phystwin-web/" target="_blank" rel="noopener noreferrer"><span class="method-link">PhysTwin</span></a>.</p>
       <br>
       <div class="container is-max-desktop affordance-viz">
         <div id="results-carousel-baseline" class="carousel results-carousel">
           <div class="item item-baseline">
             <div class="full pt item-container">
-              <div class="item-container">
-                <div class="half">
-                  <p><strong>w/ [placeholder]</strong></p>
-                  <br>
-                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/astranaut_horse_ours.mp4" type="video/mp4">
+              <div class="columns is-mobile">
+                <div class="column">
+                  <p><strong>GT</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/video/0_pita.mp4" type="video/mp4">
                   </video>
                 </div>
-                <div class="half">
-                  <p><strong>w/o [placeholder]</strong></p>
-                  <br>
-                  <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                    <source src="./static/videos/astranaut_horse_baseline.mp4" type="video/mp4">
+                <div class="column">
+                  <p><strong>Ours</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_pita.mp4" type="video/mp4">
                   </video>
                 </div>
-                <br>
+                <div class="column">
+                  <p><strong>PhysTwin</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/points/point_cam_0_phystwin/inference_pita.mp4" type="video/mp4">
+                  </video>
+                </div>
               </div>
-              <p><strong>An astronaut riding a horse</strong></p>
-
+              <p class="has-text-centered mt-3">
+                <strong>Tear bread</strong>
+              </p>
             </div>
           </div>
+          <div class="item item-baseline">
+            <div class="full pt item-container">
+              <div class="columns is-mobile">
+                <div class="column">
+                  <p><strong>GT</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/video/0_playdoh.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column">
+                  <p><strong>Ours</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_playdoh.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column">
+                  <p><strong>PhysTwin</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/points/point_cam_0_phystwin/inference_playdoh.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <p class="has-text-centered mt-3">
+                <strong>Squeeze plasticine</strong>
+              </p>
+            </div>
+          </div>
+          <div class="item item-baseline">
+            <div class="full pt item-container">
+              <div class="columns is-mobile">
+                <div class="column">
+                  <p><strong>GT</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/video/0_rope.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column">
+                  <p><strong>Ours</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/points/point_cam_0_ours/inference_rope.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column">
+                  <p><strong>PhysTwin</strong></p>
+                  <video autoplay controls muted loop playsinline>
+                    <source src="./assets/experiments/offline/points/point_cam_0_phystwin/inference_rope.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <p class="has-text-centered mt-3">
+                <strong>Manipulate rope</strong>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <script>
         bulmaCarousel.attach('#results-carousel-baseline', {
-          slidesToShow: 2
+          slidesToShow: 1
         });
       </script>
-  </section> -->
+  </section>
 
 
   <section class="section" id="BibTeX">
