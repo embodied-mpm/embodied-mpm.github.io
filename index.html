@@ -82,6 +82,14 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2601.17251" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
                   <a href="https://arxiv.org/abs/2601.17251" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -94,9 +102,9 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (coming soon)</span>
                   </a>
-                  </span>
+                </span>
               </div>
 
             </div>
@@ -109,13 +117,12 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/teaser.mp4" type="video/mp4">
-        </video> -->
-        <img src="./static/images/teaser.jpg" class="interpolation-image" />
         <h2 class="subtitle has-text-centered">
-          <span class="dnerf">EMPM Overview</span>. Our differentiable MPM simulator estimates material parameters from real observations such as 3D object shape. It handles diverse, complex deformable objects and can update parameters online from streaming video.
+          <strong>TL;DR:</strong> Our differentiable MPM simulator estimates material parameters from real observations such as 3D object shape. It handles diverse, complex deformable objects and can update parameters online from streaming video.
         </h2>
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="assets/teaser_video.MP4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
@@ -125,7 +132,7 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3">Paper Abstract</h2>
           <div class="content has-text-justified">
             <p>
               Modeling deformable objects -- especially continuum materials -- in a way that is physically plausible, generalizable, and data-efficient remains challenging across 3D vision, graphics, and robotic manipulation. Many existing methods oversimplify the rich dynamics of deformable objects or require large training sets, which often limits generalization. We introduce embodied MPM (EMPM), a deformable object modeling and simulation framework built on a differentiable Material Point Method (MPM) simulator that captures the dynamics of challenging materials. From multi-view RGB-D videos, our approach reconstructs geometry and appearance, then uses an MPM physics engine to simulate object behavior by minimizing the mismatch between predicted and observed visual data. We further optimize MPM parameters online using sensory feedback, enabling adaptive, robust, and physics-aware object representations that open new possibilities for robotic manipulation of complex deformables. Experiments show that EMPM outperforms spring-mass baseline models.
@@ -133,16 +140,25 @@
           </div>
         </div>
       </div>
-      <!-- Paper video. -->
-      <div class="columns is-centered has-text-centered">
+      <!-- Paper walkthrough video. -->
+      <!-- <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <div class="publication-video">
-            <iframe src="https://drive.google.com/file/d/10AWXrCk124nEtoITAnSr1HRAuaVN0AXT/preview" frameborder="0"
+            <iframe src="https://drive.google.com/file/d/1KK5WtenrFxUP_dhgoo37Q1YQawPCoU_n/view?usp=sharing" frameborder="0"
               allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
-      </div>
-      <!--/ Paper video. -->
+      </div> -->
+      <!--/ Paper walkthrough video. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Explainer Video</h2>
+      <video id="walkthrough" autoplay controls muted loop playsinline width="100%">
+        <source src="assets/EMPM_walkthrough_web.mp4" type="video/mp4">
+      </video>
     </div>
   </section>
 
@@ -150,8 +166,10 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">Method Overview</h2>
       <img src="./static/images/pipeline.jpg" class="interpolation-image" />
+      <br>
+      <br>
       <p>
-        <span class="dnerf">Method Overview</span>. Our MPM simulation engine takes a reconstructed pointcloud and tracked 3D points as inputs. The model parameters are optimized using the discrepancy between the model's prediction and 3D shape reconstruction and tracking. The control inputs applied to the dynamics model of MPM is computed as the velocity extracted from the reconstructions. In the inference stage, we test the model's performance in terms of predicting 3D point positions and RGB image rendering of the 3D Gaussian splats.
+        Our MPM simulation engine takes a reconstructed pointcloud and tracked 3D points as inputs. The model parameters are optimized using the discrepancy between the model's prediction and 3D shape reconstruction and tracking. The control inputs applied to the dynamics model of MPM is computed as the velocity extracted from the reconstructions. In the inference stage, we test the model's performance in terms of predicting 3D point positions and RGB image rendering of the 3D Gaussian splats.
       </p>
     </div>
   </section>
@@ -512,10 +530,10 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{chen2026empm,
+      <pre><code>@article{chenhu2026empm,
       title={EMPM: Embodied MPM for Modeling and Simulation of Deformable Objects},
-      author={Yunuo Chen and Yafei Hu and Lingfeng Sun and Tushar Kusnur and Laura Herlant and Chenfanfu Jiang},
-      journal={arXiv preprint arXiv:2601.17251},
+      author={Yunuo Chen* and Yafei Hu* and Lingfeng Sun and Tushar Kusnur and Laura Herlant and Chenfanfu Jiang},
+      journal={IEEE Robotics and Automation Letters (RA-L)},
       year={2026},
 }</code></pre>
     </div>
